@@ -15,4 +15,8 @@ OpenCover.Console.exe ^
   -skipautoprops ^
   -hideskipped:Filter;MissingPdb;Attribute
 
+:: alternatively, run with
+:: -target:"mstest.exe" ^
+:: -targetargs:"/testcontainer:SimpleTestTests\bin\Debug\SimpleTestTests.dll" ^
+  
 ReportGenerator.exe -reports:opencover.xml -targetDir:CoverReport -Reporttypes:Html;Badges
