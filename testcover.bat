@@ -8,10 +8,9 @@ IF EXIST testcover.user.bat (
 OpenCover.Console.exe ^
   -target:"vstest.console.exe" ^
   -targetargs:"SimpleTestTests\bin\Debug\SimpleTestTests.dll" ^
-  -coverbytest:"SimpleTestTests.dll" ^
+  -coverbytest:"*SimpleTestTests.dll" ^
   -register:user ^
   -output:opencover.xml ^
-  -filter:"+[*]* -[SimpleTestTests]*" ^
   -skipautoprops ^
   -hideskipped:Filter;MissingPdb;Attribute
 
